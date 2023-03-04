@@ -1,0 +1,14 @@
+#flexbox{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+body {
+    background-color:#1ac9a1;
+    font-family:helvetica;
+}
+
+#submit-btn{
+    margin-top: 70px;
+}
