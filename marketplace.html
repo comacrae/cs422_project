@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Website - Marketplace</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+nav a.active {
+  background-color: #555;
+}
+nav a:hover {
+  background-color: #555;
+}
+
+nav img {
+  height: 30px;
+}
+
+/* Main Styles */
+
+main {
+  margin: 20px;
+}
+
+.food-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.food-items li {
+  flex: 0 0 30%;
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.food-items img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.food-items h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.food-items p {
+  margin: 0;
+}
+
+.food-items .price {
+  font-weight: bold;
+}
+
+.add-to-cart {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #555;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li {
+  margin: 0 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+  /* Small phone in portrait orientation */
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Tablet in portrait orientation */
+  nav ul li {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* 4K widescreen desktop monitor */
+  header {
+    padding: 20px 40px;
+  }
+
+  nav ul li {
+    margin-right: 30px;
+  }
+
+  main {
+    padding: 40px;
+  }
+
+  footer {
+    padding: 30px;
+  }
+}
+
+    </style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="#" class="active">Marketplace</a></li>
+				<li><a href="#">Education</a></li>
+				<li><a href="#">Nearby Stores</a></li>
+				<li><a href="#">Food Journal</a></li>
+				<li><a href="#">Account</a></li>
+				<li style="float:right"><a href="#"><img src="cart-icon.png" alt="Cart Icon"></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h1>Marketplace</h1>
+			<form>
+				<fieldset>
+					<legend>Filters</legend>
+					<label for="culture-filter">Culture:</label>
+					<select id="culture-filter">
+						<option value="">--Select--</option>
+						<option value="mexican">Mexican</option>
+						<option value="italian">Italian</option>
+						<option value="chinese">Chinese</option>
+						<option value="indian">Indian</option>
+					</select>
+
+					<label for="origin-filter">Origin:</label>
+					<select id="origin-filter">
+						<option value="">--Select--</option>
+						<option value="local">Local</option>
+						<option value="imported">Imported</option>
+					</select>
+
+					<label for="flavor-filter">Flavor:</label>
+					<select id="flavor-filter">
+						<option value="">--Select--</option>
+						<option value="spicy">Spicy</option>
+						<option value="sweet">Sweet</option>
+						<option value="sour">Sour</option>
+						<option value="bitter">Bitter</option>
+					</select>
+
+					<button type="submit">Filter</button>
+				</fieldset>
+			</form>
+			<!-- Food items list -->
+			<ul class="food-items">
+				<li>
+					<img src="food1.jpg" alt="Food 1">
+					<h2>Food 1</h2>
+					<p>Description of Food 1.</p>
+					<p class="price">$10.00</p>
+					<button class="add-to-cart">Add to Cart</button>
+				</li>
+				<li>
+					<img src="food2.jpg" alt="Food 2">
+					<h2>Food 2</h2>
+					<p>Description of Food 2.</p>
+					<p class="price">$12.00</p>
+					<button class="add-to-cart">Add to Cart</button>
+				</li>
+				<li>
+					<img src="food3.jpg" alt="Food 3">
+					<h2>Food 3</h2>
+					<p>Description of Food 3.</p>
+					<p class="price">$15.00</p>
+					<button class="add-to-cart">Add to Cart</button>
+				</li>
+				<li>
+					<img src="food4.jpg" alt="Food 4">
+                    <h2>Food 3</h2>
+					<p>Description of Food 3.</p>
+					<p class="price">$15.00</p>
+					<button class="add-to-cart">Add to Cart</button>
+				</li>
+			</ul>
+        </section>
+	</main>
+	<footer>
+		<ul>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Instagram</a></li>
+		</ul>
+	</footer>
+</body>
+</html>		

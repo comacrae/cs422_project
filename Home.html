@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Website - Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+nav a.active {
+  background-color: #555;
+}
+nav a:hover {
+  background-color: #555;
+}
+
+nav img {
+  height: 30px;
+}
+
+main {
+  margin: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer li {
+  margin: 0 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Add the following styles to the existing styles */
+
+.article-block {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.article-img {
+  flex-basis: 30%;
+  margin-right: 20px;
+}
+
+.article-img img {
+  width: 100%;
+}
+
+.article-info {
+  flex-basis: 70%;
+}
+
+.article-info h2 {
+  margin-top: 0;
+}
+
+.article-info a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.article-info a:hover {
+  background-color: #555;
+}
+
+.order-block {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.order-img {
+  flex-basis: 30%;
+  margin-right: 20px;
+}
+
+.order-img img {
+  width: 100%;
+}
+
+.order-info {
+  flex-basis: 70%;
+}
+
+.order-info h2 {
+  margin-top: 0;
+}
+
+.order-info p {
+  margin: 0;
+}
+
+.order-info p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.food-block-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.food-block {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.food-block img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.food-block h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.food-block p {
+  margin-bottom: 10px;
+}
+
+.food-block button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.food-block button:hover {
+  background-color: #555;
+}
+
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+  /* Small phone in portrait orientation */
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Tablet in portrait orientation */
+  nav ul li {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* 4K widescreen desktop monitor */
+  header {
+    padding: 20px 40px;
+  }
+
+  nav ul li {
+    margin-right: 30px;
+  }
+
+  main {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  footer {
+    padding: 30px;
+  }
+}
+
+    </style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="Home.html" class="active">Home</a></li>
+				<li><a href="marketplace.html">Marketplace</a></li>
+				<li><a href="#">Education</a></li>
+				<li><a href="#">Nearby Stores</a></li>
+				<li><a href="#">Food Journal</a></li>
+				<li><a href="#">Account</a></li>
+				<li style="float:right"><a href="#"><img src="cart1.webp" alt="Cart Icon"></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+        <section>
+            <h1>News</h1>
+            <div id="news-slider">
+              <div>
+                <h2>Article 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div>
+                <h2>Article 2</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div>
+                <h2>Article 3</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h1>Food Articles</h1>
+            <div class="article-block">
+              <div class="article-img">
+                <img src="article1.jpg" alt="Article 1">
+              </div>
+              <div class="article-info">
+                <h2>Article 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+            <div class="article-block">
+              <div class="article-img">
+                <img src="article2.jpg" alt="Article 2">
+              </div>
+              <div class="article-info">
+                <h2>Article 2</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <h1>Recent Orders</h1>
+            <div class="order-block">
+              <div class="order-img">
+                <img src="food1.jpg" alt="Food 1">
+              </div>
+              <div class="order-info">
+                <h2>Food Item 1</h2>
+                <p>Order Date: March 1, 2023</p>
+                <p>Price: $10.99</p>
+              </div>
+            </div>
+            <div class="order-block">
+              <div class="order-img">
+                <img src="food2.jpg" alt="Food 2">
+              </div>
+              <div class="order-info">
+                <h2>Food Item 2</h2>
+                <p>Order Date: February 28, 2023</p>
+                <p>Price: $7.99</p>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <h1>Recently Added Foods</h1>
+            <div class="food-block-container">
+              <div class="food-block">
+                <img src="food-1.jpg" alt="Food 1">
+                <h2>Food 1 Name</h2>
+                <p>Food 1 Description</p>
+                <button>Add to Cart</button>
+              </div>
+              <div class="food-block">
+                <img src="food-2.jpg" alt="Food 2">
+                <h2>Food 2 Name</h2>
+                <p>Food 2 Description</p>
+                <button>Add to Cart</button>
+              </div>
+              <div class="food-block">
+                <img src="food-3.jpg" alt="Food 3">
+                <h2>Food 3 Name</h2>
+                <p>Food 3 Description</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+          </section>
+          
+	</main>
+	<footer>
+		<ul>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Instagram</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
